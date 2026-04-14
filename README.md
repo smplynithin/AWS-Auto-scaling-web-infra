@@ -392,7 +392,7 @@ Current capacity:    3
 
 ## 👨‍💻 Author
 
-**Nithin** — Durability CAE Engineer transitioning to DevOps
+**Nithin**
 📍 Bangalore, India
 🔗 [GitHub](https://github.com/yourusername)
 
