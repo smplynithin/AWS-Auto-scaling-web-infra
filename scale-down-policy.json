@@ -1,0 +1,20 @@
+{
+  "AlarmName": "nithin-asg-scale-down-cpu",
+  "AlarmDescription": "Scale down when CPU drops below 60% for 10 minutes",
+  "MetricName": "CPUUtilization",
+  "Namespace": "AWS/EC2",
+  "Statistic": "Average",
+  "Period": 600,
+  "EvaluationPeriods": 1,
+  "Threshold": 60,
+  "ComparisonOperator": "LessThanThreshold",
+  "Dimensions": [
+    {
+      "Name": "AutoScalingGroupName",
+      "Value": "nithin-asg"
+    }
+  ],
+  "AlarmActions": [
+    "arn:aws:autoscaling:us-east-1:YOUR_ACCOUNT_ID:scalingPolicy:YOUR_POLICY_ID"
+  ]
+}

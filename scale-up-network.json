@@ -1,0 +1,21 @@
+{
+  "AlarmName": "nithin-asg-scale-up-network",
+  "AlarmDescription": "Scale up when inbound network traffic is high",
+  "MetricName": "NetworkIn",
+  "Namespace": "AWS/EC2",
+  "Statistic": "Average",
+  "Period": 120,
+  "EvaluationPeriods": 1,
+  "Threshold": 5000000,
+  "ComparisonOperator": "GreaterThanThreshold",
+  "Dimensions": [
+    {
+      "Name": "AutoScalingGroupName",
+      "Value": "nithin-asg"
+    }
+  ],
+  "AlarmActions": [
+    "arn:aws:autoscaling:us-east-1:YOUR_ACCOUNT_ID:scalingPolicy:YOUR_POLICY_ID"
+  ],
+  "_comment": "Threshold = 5MB/sec inbound. Adjust based on your app's normal traffic baseline."
+}

@@ -1,0 +1,21 @@
+{
+  "AlarmName": "nithin-asg-scale-up-requests",
+  "AlarmDescription": "Scale up when ALB request count per target is high",
+  "MetricName": "RequestCountPerTarget",
+  "Namespace": "AWS/ApplicationELB",
+  "Statistic": "Sum",
+  "Period": 60,
+  "EvaluationPeriods": 1,
+  "Threshold": 1000,
+  "ComparisonOperator": "GreaterThanThreshold",
+  "Dimensions": [
+    {
+      "Name": "TargetGroup",
+      "Value": "targetgroup/nithin-tg/YOUR_TG_ID"
+    }
+  ],
+  "AlarmActions": [
+    "arn:aws:autoscaling:us-east-1:YOUR_ACCOUNT_ID:scalingPolicy:YOUR_POLICY_ID"
+  ],
+  "_comment": "Threshold = 1000 requests/min per target. Adjust based on your Nginx capacity."
+}
