@@ -100,6 +100,8 @@ Key highlights:
 
 ## 🖼️ Custom AMI — Built with Packer
 
+https://github.com/smplynithin/packer.git
+
 Instead of using a plain Ubuntu AMI and running setup scripts at launch time, this project uses **Packer** to pre-bake everything into a custom AMI.
 
 ### What the Packer build does:
